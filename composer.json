@@ -1,4 +1,12 @@
 {
+    "name": "sokil/php-diff",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmytro Sokil",
+            "email": "dmytro.sokil@gmail.com"
+        }
+    ],
     "require": {
         "sebastian/diff": "^1.4"
     },
