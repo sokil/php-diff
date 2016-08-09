@@ -107,6 +107,14 @@ class Renderer
      */
     public function render($from, $to)
     {
+        if (!is_array($from)) {
+            $from = (string)$from;
+        }
+
+        if (!is_array($to)) {
+            $to = (string)$to;
+        }
+
         // get diff
         $diff = $this->differ->diffToArray($from, $to);
 
