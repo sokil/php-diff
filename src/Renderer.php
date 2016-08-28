@@ -101,22 +101,13 @@ class Renderer
     }
 
     /**
-     * @param array|string $from
-     * @param array|string $to
+     * @param Change $change
      * @return string highlighted diff
      */
-    public function render($from, $to)
+    public function render(Change $change)
     {
-        if (!is_array($from)) {
-            $from = (string)$from;
-        }
-
-        if (!is_array($to)) {
-            $to = (string)$to;
-        }
-
         // get diff
-        $diff = $this->differ->diffToArray($from, $to);
+        $diff = $this->differ->diffToArray($change->getOldValue(), $change->getNewValue());
 
         // render diff
         foreach ($diff as &$line) {
