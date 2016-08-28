@@ -80,7 +80,7 @@ class RendererTest extends \PHPUnit_Framework_TestCase
      * @param $newValue
      * @param array|null $renderOptions
      */
-    public function testRender_ChanageValueStringType(
+    public function testRender_ChangeValueHasStringType(
         $expectedDiff,
         $oldValue,
         $newValue,

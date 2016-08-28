@@ -4,31 +4,28 @@ namespace Sokil\Diff;
 
 class Change
 {
+    /**
+     * @var mixed
+     */
     private $oldValue;
 
+    /**
+     * @var mixed
+     */
     private $newValue;
 
     /**
-     * @param array|string $oldValue
-     * @param array|string $newValue
+     * @param mixed $oldValue
+     * @param mixed $newValue
      */
     public function __construct($oldValue, $newValue)
     {
-        // old value
-        if (!is_array($oldValue)) {
-            $oldValue = (string)$oldValue;
-        }
         $this->oldValue = $oldValue;
-
-        // new value
-        if (!is_array($newValue)) {
-            $newValue = (string)$newValue;
-        }
         $this->newValue = $newValue;
     }
 
     /**
-     * @return array|string
+     * @return mixed
      */
     public function getOldValue()
     {
@@ -36,7 +33,7 @@ class Change
     }
 
     /**
-     * @return array|string
+     * @return mixed
      */
     public function getNewValue()
     {

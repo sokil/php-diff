@@ -107,7 +107,10 @@ class Renderer
     public function render(Change $change)
     {
         // get diff
-        $diff = $this->differ->diffToArray($change->getOldValue(), $change->getNewValue());
+        $diff = $this->differ->diffToArray(
+            (string)$change->getOldValue(),
+            (string)$change->getNewValue()
+        );
 
         // render diff
         foreach ($diff as &$line) {
