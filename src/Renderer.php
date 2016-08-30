@@ -128,6 +128,6 @@ class Renderer
         }
 
         // build diff
-        return implode('', $diff);
+        return implode(PHP_EOL, $diff);
     }
 }
