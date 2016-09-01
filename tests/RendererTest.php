@@ -18,6 +18,26 @@ class RendererTest extends \PHPUnit_Framework_TestCase
                 ['line1', 'line2changed', 'line3'],
                 [],
             ],
+            'DefaultFormat_AddLine' => [
+                [
+                    'line1',
+                    '<ins>line2</ins>',
+                    'line3'
+                ],
+                ['line1', 'line3'],
+                ['line1', 'line2', 'line3'],
+                [],
+            ],
+            'DefaultFormat_DropLine' => [
+                [
+                    'line1',
+                    '<del>line2</del>',
+                    'line3'
+                ],
+                ['line1', 'line2', 'line3'],
+                ['line1', 'line3'],
+                [],
+            ],
             'CustomFullySpecifiedFormat' => [
                 [
                     'line1',
