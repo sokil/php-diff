@@ -2,7 +2,9 @@
 
 namespace Sokil\Diff;
 
-class RendererTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class RendererTest extends TestCase
 {
     public function renderChangeDataProvider()
     {
@@ -115,6 +117,28 @@ class RendererTest extends \PHPUnit_Framework_TestCase
         ));
 
         $this->assertEquals($expectedDiff, $actualDiff);
+    }
+
+    /**
+     * @expectedException        \InvalidArgumentException
+     * @expectedExceptionMessage Invalid format specified
+     */
+    public function testSetFormatWithInvalidType()
+    {
+        $diffRenderer = new Renderer([]);
+
+        $diffRenderer->setFormat('not_array_type');
+    }
+
+    /**
+     * @expectedException        \InvalidArgumentException
+     * @expectedExceptionMessage Invalid format specified
+     */
+    public function testSetFormatWithInvalidDefinedFormats()
+    {
+        $diffRenderer = new Renderer([]);
+
+        $diffRenderer->setFormat(1000);
     }
 
 }
