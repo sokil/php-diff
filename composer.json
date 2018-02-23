@@ -12,7 +12,8 @@
         "sebastian/diff": "^1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.5"
+        "phpunit/phpunit": "^5.5",
+        "satooshi/php-coveralls": ">=0.7.1 <2.0"
     },
     "autoload": {
         "psr-4": {
