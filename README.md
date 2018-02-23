@@ -3,6 +3,7 @@
 Highlight diffs provided by Sebastian Bergmann diff
 
 [![Build Status](https://travis-ci.org/sokil/php-diff.svg?branch=master)](https://travis-ci.org/sokil/php-diff)
+[![Coverage Status](https://coveralls.io/repos/github/sokil/php-diff/badge.svg?branch=master&1)](https://coveralls.io/github/sokil/php-diff?branch=master)
 
 ## Installation
 
