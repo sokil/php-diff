@@ -119,23 +119,21 @@ class RendererTest extends TestCase
         $this->assertEquals($expectedDiff, $actualDiff);
     }
 
-    /**
-     * @expectedException        \InvalidArgumentException
-     * @expectedExceptionMessage Invalid format specified
-     */
     public function testSetFormatWithInvalidType()
     {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Invalid format specified');
+
         $diffRenderer = new Renderer([]);
 
         $diffRenderer->setFormat('not_array_type');
     }
 
-    /**
-     * @expectedException        \InvalidArgumentException
-     * @expectedExceptionMessage Invalid format specified
-     */
     public function testSetFormatWithInvalidDefinedFormats()
     {
+        $this->expectException('\InvalidArgumentException');
+        $this->expectExceptionMessage('Invalid format specified');
+
         $diffRenderer = new Renderer([]);
 
         $diffRenderer->setFormat(1000);

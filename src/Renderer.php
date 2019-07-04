@@ -114,6 +114,8 @@ class Renderer
 
         // render diff
         foreach ($diff as &$line) {
+            $line[0] = trim($line[0]);
+
             switch ($line[1]) {
                 case 0: // NOT CHANGED
                     $line = $line[0];
