@@ -90,5 +90,3 @@ $renderer = new Renderer([
     'format' => Renderer::FORMAT_DEFAULT
 ]);
 ```
-
-You can omit any 
